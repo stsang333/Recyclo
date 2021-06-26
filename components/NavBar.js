@@ -1,12 +1,12 @@
 import React from 'react';
 import { StyleSheet, Text, View, FlatList } from 'react-native';
 import colors from '../config/colors.js';
-import FontAwesome, { SolidIcons, RegularIcons, BrandIcons } from 'react-native-fontawesome';
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 function NavBar() {
   return (
     <View style={styles.navContainer}>
-      <FontAwesome icon={SolidIcons.home} style={styles.homeIcon}/>
+      <Icon name='home' style={styles.homeIcon}/>
       <Text style={styles.header}>Recyclo</Text>
     </View>
   );
@@ -19,16 +19,18 @@ const styles = StyleSheet.create({
     width: '100%',
     height: '40%',
     justifyContent: 'center',
-    alignItems: 'center'
   },
   header: {
     color: colors.white,
-    fontSize: 30,
-    marginTop: '10%'
+    fontSize: 40,
+    alignSelf: 'center',
+    fontWeight: 'bold'
   }, 
   homeIcon: {
-    marginTop: '20%',
-    color: colors.white
+    color: colors.white,
+    fontSize: 40,
+    top: 43,
+    left: 40
   }
 });
 
