@@ -1,6 +1,7 @@
 import React from "react";
 import { View, Text, StyleSheet, Pressable } from "react-native";
-import colors from "./config/colors";
+import colors from "../config/colors";
+import Icon from "react-native-vector-icons/FontAwesome5";
 
 function LoadingScreen() {
   return (
@@ -13,6 +14,7 @@ function LoadingScreen() {
       <View style={styles.back}>
         <Text style={styles.title}>Recyclo</Text>
       </View>
+      <Icon name="recycle" style={styles.icon} />
     </Pressable>
   );
 }
@@ -27,7 +29,7 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 50,
     fontWeight: "bold",
-    color: colors.primaryShade,
+    color: colors.white,
   },
   back: {
     backgroundColor: "darkgrey",
@@ -38,6 +40,12 @@ const styles = StyleSheet.create({
     top: "-10%",
     left: "5%",
     borderRadius: 40,
+  },
+  icon: {
+    alignSelf: "center",
+    fontSize: 200,
+    fontWeight: "bold",
+    color: "darkgray",
   },
 });
 
