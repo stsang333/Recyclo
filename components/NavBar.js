@@ -3,8 +3,7 @@ import { Pressable, StyleSheet, Text, View, FlatList } from 'react-native';
 import colors from '../config/colors.js';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
-
-function NavBar() {
+function NavBar({ navigation }) {
   return (
     <View style={styles.navContainer}>
       <Pressable>
