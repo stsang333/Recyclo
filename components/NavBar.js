@@ -7,7 +7,8 @@ function NavBar() {
   return (
     <View style={styles.navContainer}>
       <Pressable>
-        <Icon name='home' style={styles.homeIcon} onPress={() => {console.log('direct to home page');}}/>
+        <Icon name='home' style={styles.homeIcon} onPress={() => {
+          console.log('direct to home page');}}/>
       </Pressable>
       <Text style={styles.header}>Recyclo</Text>
     </View>
