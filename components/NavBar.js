@@ -1,12 +1,14 @@
 import React from 'react';
-import { StyleSheet, Text, View, FlatList } from 'react-native';
+import { Pressable, StyleSheet, Text, View, FlatList } from 'react-native';
 import colors from '../config/colors.js';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
 function NavBar() {
   return (
     <View style={styles.navContainer}>
-      <Icon name='home' style={styles.homeIcon}/>
+      <Pressable>
+        <Icon name='home' style={styles.homeIcon} onPress={() => {console.log('direct to home page');}}/>
+      </Pressable>
       <Text style={styles.header}>Recyclo</Text>
     </View>
   );
