@@ -6,7 +6,7 @@ import FontAwesome, { SolidIcons, RegularIcons, BrandIcons } from 'react-native-
 function NavBar() {
   return (
     <View style={styles.navContainer}>
-      <FontAwesome icon={SolidIcons.bomb} style={styles.homeIcon}/>
+      <FontAwesome icon={SolidIcons.home} style={styles.homeIcon}/>
       <Text style={styles.header}>Recyclo</Text>
     </View>
   );
