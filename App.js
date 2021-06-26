@@ -7,9 +7,6 @@ import Home from './pages/Home.js';
 export default function App() {
   return (
     <View style={styles.container}>
-      {/*<NavBar/>
-      
-      <StatusBar style="auto" />*/}
       <Home/>
     </View>
   );

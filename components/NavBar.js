@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
     backgroundColor: colors.primary,
     color: colors.white,
     width: '100%',
-    height: '40%',
+    height: '12%',
     justifyContent: 'center',
   },
   header: {
