@@ -2,12 +2,20 @@ import React from "react";
 import { View, Text, StyleSheet, Pressable } from "react-native";
 import colors from "../config/colors";
 import Icon from "react-native-vector-icons/FontAwesome5";
+import Home from "./Home.js";
+import { useNavigation } from '@react-navigation/native';
 
 function LoadingScreen() {
+  const navigation = useNavigation();
+
+  function navigateToHome() {
+    navigation.navigate("Home");
+  }
+
   return (
     <Pressable
       onPress={() => {
-        console.log("The Press is Working!");
+        navigateToHome()
       }}
       style={styles.container}
     >
