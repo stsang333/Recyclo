@@ -39,9 +39,11 @@ const CardMenu = () => {
         <View>
             <View style={styles.cardMenu}>
                 {cardList.map((card) => {
-                    return <Card name={card.name} icon={card.icon} />
+                    return <Card name={card.name} icon={card.icon} onPress={}/>
                 })}
             </View>
+
+            {/*  */}
             
         </View>
     )
