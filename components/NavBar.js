@@ -2,13 +2,20 @@ import React from 'react';
 import { Pressable, StyleSheet, Text, View, FlatList } from 'react-native';
 import colors from '../config/colors.js';
 import Icon from 'react-native-vector-icons/FontAwesome';
+import { useNavigation } from '@react-navigation/native';
 
-function NavBar({ navigation }) {
+function NavBar() {
+  const navigation = useNavigation();
+
+  function navigateToCardMenu() {
+    navigation.navigate("Card Menu");
+  }
+
   return (
     <View style={styles.navContainer}>
       <Pressable>
         <Icon name='home' style={styles.homeIcon} onPress={() => {
-          console.log('direct to home page');}}/>
+          navigateToCardMenu()}}/>
       </Pressable>
       <Text style={styles.header}>Recyclo</Text>
     </View>

@@ -8,14 +8,14 @@ import { useNavigation } from '@react-navigation/native';
 function LoadingScreen() {
   const navigation = useNavigation();
 
-  function navigateToHome() {
-    navigation.navigate("Home");
+  function navigateToCardMenu() {
+    navigation.navigate("Card Menu");
   }
 
   return (
     <Pressable
       onPress={() => {
-        navigateToHome()
+        navigateToCardMenu()
       }}
       style={styles.container}
     >

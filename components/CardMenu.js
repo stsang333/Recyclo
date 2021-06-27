@@ -1,12 +1,21 @@
-
 import React, {useState, useEffect} from 'react'
 import { StyleSheet, Text, View, FlatList } from 'react-native';
 import colors from '../config/colors.js';
 import Card from './Card.js';
+import { useNavigation } from '@react-navigation/native';
+import NavBar from './NavBar';
+import Faq from '../pages/Faq.js';
 
 const CardMenu = () => {
     const [cardList, setCardList] = useState([])
     //const [cardPressed, setCardPressed] = useState('')
+    const navigation = useNavigation();
+
+    function cardPressed(name) {
+        
+        navigation.navigate("Card View", {cardName: name});
+
+    }
     
     useEffect(()=>{
         setCardList([{
@@ -32,19 +41,21 @@ const CardMenu = () => {
         {
             name: "Electronics",
             icon: "tablet"
+        },
+        {
+            name: "FAQ",
+            icon: "question-circle"
         }])
     }, [])
     
     return (
         <View>
+            <NavBar/>
             <View style={styles.cardMenu}>
                 {cardList.map((card) => {
-                    return <Card name={card.name} icon={card.icon} onPress={}/>
+                    return <Card name={card.name} icon={card.icon} onPress={() => cardPressed(card.name)}/>
                 })}
             </View>
-
-            {/*  */}
-            
         </View>
     )
 }
@@ -55,10 +66,9 @@ const styles = StyleSheet.create({
         top: 40,
         left: 25,
 
-
         display: 'flex',
         flexDirection: 'row',
-        justifyContent: 'space-between',
+        justifyContent: 'center',
         flexWrap: 'wrap',
 
         width: '90%',
